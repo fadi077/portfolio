@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/data/content";
+import { siteUrl } from "@/lib/site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: site.url, lastModified: new Date() }];
+  return ["", "/resume.json", "/llms.txt"].map((p) => ({ url: `${siteUrl}${p}` }));
 }
