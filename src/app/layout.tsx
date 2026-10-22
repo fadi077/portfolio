@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: `${site.name} | ${site.title}`,
   description,
-  keywords: ["Fahad Saeed", "Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Junior Developer", "Data Science", "Sheffield", "Rotherham", "UK"],
+  keywords: ["Muhammad Fahad Saeed", "Fahad Saeed", "Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Junior Developer", "Data Science", "Sheffield", "Rotherham", "UK"],
   authors: [{ name: site.name }],
   alternates: { canonical: "/" },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: `${site.name} | ${site.title}`,
     description,
     siteName: site.name,
-    images: [{ url: "/shots/offshorecv.com.jpg", width: 1280, height: 800, alt: "Offshore CV, a project by Fahad Saeed" }],
+    images: [{ url: "/shots/offshorecv.com.jpg", width: 1280, height: 800, alt: "Offshore CV, a project by Muhammad Fahad Saeed" }],
     locale: "en_GB",
   },
   twitter: { card: "summary_large_image", title: `${site.name} | ${site.title}`, description, images: ["/shots/offshorecv.com.jpg"] },

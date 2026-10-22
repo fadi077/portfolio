@@ -2,15 +2,15 @@
 
 export const site = {
   url: "https://fahadsaeed.vercel.app", // TODO: replace with your real domain once deployed
-  name: "Fahad Saeed",
+  name: "Muhammad Fahad Saeed",
   title: "Full-Stack Developer",
   tagline: "React · Next.js · TypeScript · Node.js · MSc Data Science & AI",
   location: "Rotherham, UK",
   intro:
-    "I build fast, custom websites and web apps with React, Next.js, TypeScript and Tailwind, backed by Node.js and Express. I recently graduated with an MSc in Data Science & AI from Sheffield Hallam University, and I'm looking for a full-time junior or graduate full-stack or data/AI role in the UK.",
+    "I build fast, custom websites and web apps with React, Next.js, TypeScript and Tailwind, backed by Node.js and Express. I recently graduated with an MSc in Data Science & AI (Distinction) from Sheffield Hallam University, and I'm looking for a full-time junior or graduate full-stack or data/AI role in the UK.",
   email: "imfahadsaeed077@gmail.com",
   linkedin: "https://www.linkedin.com/in/fahad-saeed-261755251",
-  cv: "/Fahad_Saeed_CV.pdf",
+  cv: "/Muhammad_Fahad_Saeed_CV.pdf",
   openTo: "Open to full-time junior / graduate full-stack and data/AI roles",
 };
 
@@ -164,7 +164,7 @@ export const education = [
   {
     degree: "MSc Data Science and Artificial Intelligence",
     school: "Sheffield Hallam University, UK",
-    period: "2025 – 2026",
+    period: "Sep 2025 – Sep 2026 · Distinction",
     note: "Applied Python, machine learning, explainable AI and FastAPI in practical work.",
   },
   {
@@ -175,4 +175,4 @@ export const education = [
   },
 ];
 
-export const certifications = ["IBM React Developer Certification", "Meta Professional Front-End Web Development"];
+export const certifications = ["IBM React Developer Certification", "Meta Professional Front-End Web Development", "Meta Full-Stack Developer", "Meta Next.js"];
