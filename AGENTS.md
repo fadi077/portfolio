@@ -13,7 +13,7 @@ Personal portfolio for Muhammad Fahad Saeed (job-seeking full-stack developer). 
 | Path | Purpose |
 | --- | --- |
 | `src/data/content.ts` | Typed content model: profile, projects, testimonial, skills, experience, education, certifications, hero stats |
-| `src/lib/site.ts` | `siteUrl` from `NEXT_PUBLIC_SITE_URL` (fallback `https://fahadsaeed.vercel.app`) |
+| `src/lib/site.ts` | `siteUrl` from `NEXT_PUBLIC_SITE_URL` (fallback `https://fahadsaeedportfolio.vercel.app`) |
 | `src/lib/structured-data.ts` | Generators: `personJsonLd()`, `jsonResume()` (JSON Resume v1), `llmsTxt()` |
 | `src/app/page.tsx` | Composes section components |
 | `src/app/layout.tsx` | Fonts, metadata, theme bootstrap script (dark default, `localStorage.theme`) |

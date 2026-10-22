@@ -15,4 +15,4 @@ Every fact lives in [`src/data/content.ts`](src/data/content.ts) (typed). The pa
 - CV: replace `public/Muhammad_Fahad_Saeed_CV.pdf`
 
 ## Deploy
-Import the repo on Vercel and set `NEXT_PUBLIC_SITE_URL` to the production origin (see `.env.example`). Falls back to `https://fahadsaeed.vercel.app`.
+Import the repo on Vercel and set `NEXT_PUBLIC_SITE_URL` to the production origin (see `.env.example`). Falls back to `https://fahadsaeedportfolio.vercel.app`.
