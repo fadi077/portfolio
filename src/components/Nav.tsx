@@ -1,12 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { profile } from "@/data/content";
+import { Monogram } from "./Monogram";
 
 const links = [
-  ["Work", "projects"], ["AI", "ai"], ["Skills", "skills"], ["Experience", "experience"], ["Contact", "contact"],
+  ["Work", "work"], ["AI", "ai"], ["Skills", "skills"], ["Experience", "experience"], ["Contact", "contact"],
 ] as const;
 
-export function Nav({ cv }: { cv: string }) {
+export function Nav() {
+  const cv = profile.cv;
   const [active, setActive] = useState("");
   const [dark, setDark] = useState(true);
   const [open, setOpen] = useState(false);
@@ -35,9 +38,9 @@ export function Nav({ cv }: { cv: string }) {
   return (
     <header className={`sticky top-0 z-40 transition-colors duration-300 ${scrolled ? "border-b border-black/5 bg-[var(--bg)]/75 backdrop-blur-xl dark:border-white/[.06]" : "border-b border-transparent"}`}>
       <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="group flex items-center gap-2.5 font-semibold tracking-tight" aria-label="Muhammad Fahad Saeed, back to top">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-violet-500 to-blue-500 font-mono text-[11px] font-bold text-white shadow-[0_0_20px_-4px_rgb(139_92_246/.7)]">MFS</span>
-          <span className="hidden text-sm sm:inline">Muhammad Fahad Saeed</span>
+        <a href="#top" className="group flex items-center gap-2.5 font-semibold tracking-tight" aria-label={`${profile.name}, back to top`}>
+          <Monogram />
+          <span className="hidden text-sm sm:inline">{profile.name}</span>
         </a>
         <ul className="hidden items-center gap-1 rounded-full border border-black/[.06] bg-white/60 p-1 text-sm md:flex dark:border-white/[.08] dark:bg-white/[.03]">
           {links.map(([label, id]) => (

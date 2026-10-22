@@ -1,22 +1,24 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { site } from "@/data/content";
+import { profile } from "@/data/content";
+import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
-const description = `${site.title} in ${site.location}. ${site.tagline}. ${site.openTo}.`;
+const title = `${profile.name} | ${profile.role}`;
+const description = profile.summary;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: `${site.name} | ${site.title}`,
+  metadataBase: new URL(siteUrl),
+  title,
   description,
-  keywords: ["Muhammad Fahad Saeed", "Fahad Saeed", "Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Junior Developer", "Data Science", "Sheffield", "Rotherham", "UK"],
-  authors: [{ name: site.name }],
-  alternates: { canonical: "/" },
-  openGraph: { type: "website", url: site.url, title: `${site.name} | ${site.title}`, description, siteName: site.name, locale: "en_GB" },
-  twitter: { card: "summary_large_image", title: `${site.name} | ${site.title}`, description },
+  keywords: [profile.name, "Fahad Saeed", ...profile.keywords],
+  authors: [{ name: profile.name }],
+  alternates: { canonical: "/", types: { "application/json": "/resume.json", "text/plain": "/llms.txt" } },
+  openGraph: { type: "website", url: siteUrl, title, description, siteName: profile.name, locale: "en_GB" },
+  twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },
 };
 
