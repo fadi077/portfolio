@@ -11,6 +11,8 @@ export const site = {
   email: "imfahadsaeed077@gmail.com",
   linkedin: "https://www.linkedin.com/in/fahad-saeed-261755251",
   cv: "/Muhammad_Fahad_Saeed_CV.pdf",
+  github: "https://github.com/fadi077",
+  sourceRepo: "https://github.com/fadi077/portfolio",
   openTo: "Open to full-time junior / graduate full-stack and data/AI roles",
 };
 
@@ -193,3 +195,9 @@ export const testimonial = {
   org: "OffshoreCV",
   source: "via LinkedIn",
 };
+
+export const heroStats = [
+  { value: "10", label: "live client sites" },
+  { value: "8.6K", label: "Google clicks in 3 months on Offshore CV" },
+  { value: "MSc", label: "Data Science & AI, Distinction" },
+];
