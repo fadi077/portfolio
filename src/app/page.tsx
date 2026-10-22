@@ -47,7 +47,7 @@ function FeaturedCard({ p, priority }: { p: Project; priority?: boolean }) {
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-baseline justify-between gap-3">
           <h3 className="text-lg font-semibold">{p.name}</h3>
-          <a href={p.url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400">{p.domain} {"\u2197\uFE0E"}</a>
+          <a href={p.url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400">{p.domain} →</a>
         </div>
         <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{p.blurb}</p>
         <ul className="flex flex-wrap gap-1.5" aria-label="Technologies">{p.tags.map((t) => <Tag key={t}>{t}</Tag>)}</ul>
@@ -62,7 +62,7 @@ function SmallCard({ p }: { p: Project }) {
     <a href={p.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 transition hover:shadow-md dark:border-slate-800">
       <Image src={p.image} alt={`Homepage of ${p.name}`} width={1280} height={800} sizes="(min-width: 1024px) 240px, 50vw" className="aspect-[16/10] w-full object-cover object-top" />
       <div className="p-4">
-        <h3 className="font-semibold">{p.name} <span aria-hidden="true" className="text-indigo-600 dark:text-indigo-400">{"\u2197\uFE0E"}</span></h3>
+        <h3 className="font-semibold">{p.name} <span aria-hidden="true" className="text-indigo-600 dark:text-indigo-400">→</span></h3>
         <p className="mt-1 text-xs text-slate-500">{p.domain}</p>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{p.blurb}</p>
       </div>
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className={btnPrimary}>View work</a>
             <a href={site.cv} download className={btnGhost}>Download CV</a>
-            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={btnGhost}>LinkedIn {"\u2197\uFE0E"}</a>
+            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={btnGhost}>LinkedIn →</a>
           </div>
           <dl className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-slate-200 pt-6 dark:border-slate-800">
             {[["10", "live client sites"], ["2022–25", "freelance"], ["MSc", "Data Science & AI"]].map(([v, l]) => (
@@ -183,7 +183,7 @@ export default function Home() {
             <p className="max-w-xl text-lg text-slate-300">I&apos;m open to full-time junior and graduate roles in Yorkshire, Manchester, or remote/hybrid across the UK. The quickest way to reach me is email or LinkedIn.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={`mailto:${site.email}`} className={`${btn} bg-white text-slate-900 hover:bg-slate-200`}>{site.email}</a>
-              <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={`${btn} border border-slate-600 hover:bg-slate-800`}>LinkedIn {"\u2197\uFE0E"}</a>
+              <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={`${btn} border border-slate-600 hover:bg-slate-800`}>LinkedIn →</a>
               <a href={site.cv} download className={`${btn} border border-slate-600 hover:bg-slate-800`}>Download CV</a>
             </div>
           </div>
