@@ -224,6 +224,13 @@ export const education: Degree[] = [
   },
 ];
 
+export type Language = { language: string; fluency: string };
+
+export const languages: Language[] = [
+  { language: "English", fluency: "Professional" },
+  { language: "Urdu", fluency: "Native" },
+];
+
 export const certifications: string[] = [
   "IBM React Developer Certification",
   "Meta Professional Front-End Web Development",

@@ -1,6 +1,6 @@
 import { siteUrl } from "@/lib/site";
 import {
-  profile, clientStack, featuredProjects, moreProjects, researchProject, skills, experience, education, certifications, testimonial,
+  profile, clientStack, featuredProjects, moreProjects, researchProject, skills, experience, education, certifications, languages, testimonial,
 } from "@/data/content";
 
 const allProjects = [...featuredProjects, ...moreProjects];
@@ -16,6 +16,7 @@ export function personJsonLd() {
     email: `mailto:${profile.email}`,
     sameAs: [profile.linkedin, profile.github],
     address: { "@type": "PostalAddress", addressLocality: profile.location.city, addressCountry: profile.location.countryCode },
+    knowsLanguage: languages.map((l) => l.language),
     alumniOf: education.map((e) => ({ "@type": "CollegeOrUniversity", name: e.school })),
     knowsAbout: skills.flatMap((s) => s.items),
   };
@@ -45,6 +46,7 @@ export function jsonResume() {
       ...(e.grade ? { score: e.grade } : {}),
     })),
     certificates: certifications.map((name) => ({ name })),
+    languages: languages.map((l) => ({ language: l.language, fluency: l.fluency })),
     skills: skills.map((s) => ({ name: s.group, keywords: s.items })),
     projects: [
       ...allProjects.map((p) => ({
@@ -98,6 +100,9 @@ export function llmsTxt() {
     "",
     "## Certifications",
     ...certifications.map((c) => `- ${c}`),
+    "",
+    "## Languages",
+    ...languages.map((l) => `- ${l.language} (${l.fluency.toLowerCase()})`),
     "",
   ];
   return lines.join("\n");
