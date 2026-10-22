@@ -51,7 +51,7 @@ export const profile: Profile = {
   location: { city: "Rotherham", region: "South Yorkshire", countryCode: "GB", label: "Rotherham, UK" },
   pitch: "I build fast, custom websites and web apps with React, Next.js, TypeScript and Tailwind, backed by Node.js and Express.",
   summary:
-    "Full-stack developer building fast, custom websites and web apps with React, Next.js, TypeScript and Tailwind, backed by Node.js and Express. Recently graduated with an MSc in Data Science & AI (Distinction) from Sheffield Hallam University; looking for a full-time junior or graduate full-stack or data/AI role in the UK.",
+    "Full-stack developer building fast, custom websites and web apps with React, Next.js, TypeScript and Tailwind, backed by Node.js and Express. Recently graduated with an MSc in Data Science & AI (Distinction) from Sheffield Hallam University; looking for a full-time junior or graduate full-stack or data scientist / AI role in the UK.",
   keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Junior Developer", "Data Science", "Sheffield", "Rotherham", "UK"],
   availability: "Open to work",
   workPreferences: "Full-time junior and graduate roles in Yorkshire, Manchester, or remote/hybrid across the UK.",
