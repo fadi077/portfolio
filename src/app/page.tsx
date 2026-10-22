@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {
-  site, featuredProjects, moreProjects, privateRepoNote, aiProject,
+  site, featuredProjects, testimonial, moreProjects, privateRepoNote, aiProject,
   skills, experience, education, certifications, type Project,
 } from "@/data/content";
 
@@ -51,6 +51,20 @@ function FeaturedCard({ p, priority }: { p: Project; priority?: boolean }) {
         </div>
         <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">{p.blurb}</p>
         <ul className="flex flex-wrap gap-1.5" aria-label="Technologies">{p.tags.map((t) => <Tag key={t}>{t}</Tag>)}</ul>
+        {p.stats && (
+          <div>
+            <dl className="grid grid-cols-4 gap-2">
+              {p.stats.map((st) => (
+                <div key={st.label} className="rounded-lg bg-emerald-50 px-2 py-1.5 text-center dark:bg-emerald-950/40">
+                  <dt className="sr-only">{st.label}</dt>
+                  <dd className="text-sm font-bold text-emerald-700 dark:text-emerald-300">{st.value}</dd>
+                  <dd className="text-[10px] leading-tight text-slate-500 dark:text-slate-400">{st.label}</dd>
+                </div>
+              ))}
+            </dl>
+            {p.statsNote && <p className="mt-1.5 text-[11px] text-slate-500 dark:text-slate-400">{p.statsNote}</p>}
+          </div>
+        )}
         <div className="mt-auto pt-2"><PrivateBadge /></div>
       </div>
     </article>
@@ -117,6 +131,13 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2">
             {featuredProjects.map((p, i) => <FeaturedCard key={p.name} p={p} priority={i < 2} />)}
           </div>
+          <figure className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 dark:border-slate-800 dark:bg-slate-900/60">
+            <blockquote className="text-lg leading-relaxed text-slate-700 dark:text-slate-200">&ldquo;{testimonial.quote}&rdquo;</blockquote>
+            <figcaption className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              <span className="font-semibold text-slate-900 dark:text-slate-100">{testimonial.author}</span>, {testimonial.org}, {testimonial.source}
+            </figcaption>
+          </figure>
+
           <h3 className="mt-14 text-xl font-bold">More client work</h3>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {moreProjects.map((p) => <SmallCard key={p.name} p={p} />)}

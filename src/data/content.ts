@@ -21,6 +21,8 @@ export type Project = {
   image: string;
   blurb: string;
   tags: string[];
+  stats?: { value: string; label: string }[];
+  statsNote?: string;
 };
 
 const stack = ["React", "Next.js", "TypeScript", "Tailwind"];
@@ -34,6 +36,13 @@ export const featuredProjects: Project[] = [
     blurb:
       "A 25-page CV-writing platform for offshore and energy workers, featuring a CV score tool, an ATS checker, service packages and SEO landing pages.",
     tags: [...stack, "SEO"],
+    stats: [
+      { value: "8.6K", label: "Google clicks" },
+      { value: "239K", label: "impressions" },
+      { value: "3.6%", label: "avg. CTR" },
+      { value: "5", label: "avg. position" },
+    ],
+    statsNote: "Google Search Console, Jul–Oct 2026 (3 months). Daily clicks grew from near zero to ~250.",
   },
   {
     name: "Vouchara",
@@ -176,3 +185,11 @@ export const education = [
 ];
 
 export const certifications = ["IBM React Developer Certification", "Meta Professional Front-End Web Development", "Meta Full-Stack Developer", "Meta Next.js"];
+
+export const testimonial = {
+  quote:
+    "…turned them into a professional, modern website that exceeded our expectations. … I would highly recommend Fahad to anyone looking for a skilled, reliable, and professional website developer.",
+  author: "David Matthews",
+  org: "OffshoreCV",
+  source: "via LinkedIn",
+};
